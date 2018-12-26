@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+	
+before-install:
+  - docker build -t mainlabor/redisnodejs -f Dockerfile.dev .
+
+script:
+  - docker run mainlabor/redisnodejs npm run test -- --coverage
