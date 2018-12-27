@@ -1,9 +1,9 @@
 sudo: required
 services:
-  - docker
+ - docker
 	
 before-install:
-  - docker build -t mainlabor/redisnodejs -f Dockerfile.dev .
+ - docker build -t mainlabor/redisnodejs -f Dockerfile.dev .
 
 script:
-  - docker run mainlabor/redisnodejs npm run test -- --coverage
+ - docker run mainlabor/redisnodejs npm run test -- --coverage
